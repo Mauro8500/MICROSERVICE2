@@ -1,0 +1,16 @@
+### Registrar cuente
+POST http://localhost:9092/v1/api/account/save
+Content-Type: application/json 
+
+{
+    "name": "Publica"
+}
+
+#### Obtener todos las ceuntas
+GET http://localhost:9092/v1/api/account/all
+Accept: application/json
+
+#### Obtener 1 cuenta
+GET http://localhost:9092/v1/api/account?accountId=1
+Accept: application/json
+
