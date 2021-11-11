@@ -1,10 +1,20 @@
-### Registrar cuente
+### Registrar cuente por ms-account
 POST http://localhost:9092/v1/api/account/save
 Content-Type: application/json 
 
 {
     "name": "Publica"
 }
+### Registrar cliente pasando por GATEWAY
+POST http://localhost:8282/ms-account/v1/api/customer/save
+Content-Type: application/json 
+
+{
+    "name": "Publica"
+}
+
+### refrescar actuator
+POST http://localhost:9092/actuator/refresh
 
 #### Obtener todos las ceuntas
 GET http://localhost:9092/v1/api/account/all

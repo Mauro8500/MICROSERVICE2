@@ -1,5 +1,6 @@
 package arquitectura.software.msaccount.api;
 
+import arquitectura.config.AccountConfig;
 import arquitectura.software.msaccount.entity.Account;
 import arquitectura.software.msaccount.repository.AccountRepository;
 import java.util.List;
@@ -19,6 +20,8 @@ public class AccountController{
 
     @Autowired
     private AccountRepository accountRepository;
+    @Autowired
+    private AccountConfig accountConfig;
     
     @RequestMapping(path = "/test",
                     method = RequestMethod.GET)
@@ -29,6 +32,7 @@ public class AccountController{
     @RequestMapping(path = "/save",
                      method = RequestMethod.POST)
     public Account saveAccount(@RequestBody Account account){
+        System.out.println("Registrando al cliente -->: " + accountConfig.showConfiguration());
        return accountRepository.save(account);
     }
 
