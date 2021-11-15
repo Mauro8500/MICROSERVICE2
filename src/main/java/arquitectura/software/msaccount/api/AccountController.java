@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/api/account")
 
 public class AccountController{
+    
+    private static Logger LOGGER = LoggerFactory.logger(AccountController.class);
 
     @Autowired
     private AccountRepository accountRepository;
